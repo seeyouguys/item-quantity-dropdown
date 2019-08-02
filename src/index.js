@@ -3,6 +3,9 @@
 // plugin styles
 import 'styles/main.scss';
 
+// for Russian plurals
+import getPluralNoun from './pluralRus';
+
 /* eslint-disable func-names */
 (function ($) {
   const defaults = {
@@ -33,8 +36,9 @@ import 'styles/main.scss';
       let totalItems = 0;
 
       function updateDisplay () {
-        const usePlural = totalItems !== 1 && settings.textPlural.length > 0;
-        const text = usePlural ? settings.textPlural : settings.selectionText;
+        // break down array of word forms into pieces
+        const text = getPluralNoun(totalItems, ...settings.textPlural);
+
         $selection.html(`${totalItems} ${text}`);
       }
 

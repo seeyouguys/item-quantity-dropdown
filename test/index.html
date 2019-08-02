@@ -112,8 +112,7 @@
             data-mincount="1"
           >
             <div>
-              <p class="iqdropdown-item">Adults</p>
-              <p class="iqdropdown-description">12+ years</p>
+              <p class="iqdropdown-item">Взрослые</p>
             </div>
           </div>
           <div
@@ -123,19 +122,14 @@
             data-mincount="0"
           >
             <div>
-              <p class="iqdropdown-item">Children</p>
-              <p class="iqdropdown-description">2 - 11 years</p>
+              <p class="iqdropdown-item">Дети</p>
             </div>
           </div>
           <div class="iqdropdown-menu-option" data-id="infant">
             <div>
-              <p class="iqdropdown-item">Infants</p>
-              <p class="iqdropdown-description">2 years</p>
+              <p class="iqdropdown-item">Младенцы</p>
             </div>
           </div>
-          <button class="iqdropdown-menu-close">
-            Cerrar
-          </button>
         </div>
       </div>
     </div>
@@ -153,8 +147,8 @@
         $(".custom").iqDropdown({
           minItems: 1,
           maxItems: 5,
-          selectionText: "passenger",
-          textPlural: "passengers",
+          selectionText: "Сколько гостей",
+          textPlural: ['гость', 'гостя', 'гостей'],
           onChange: function(id, count, totalItems) {
             console.log(id, count, totalItems);
           },

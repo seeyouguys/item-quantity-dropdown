@@ -112,7 +112,7 @@ const config = {
 
 if (devMode) {
   config.plugins.push(
-    new HtmlWebpackPlugin({
+    new HtmlPlugin({
       template: 'test/index.html',
     }),
   );
